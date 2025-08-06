@@ -1,0 +1,283 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Cover Page Styles */
+.cover-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #a2e8f8 0%, #7bb5fb 50%, #d972f0 100%);
+    z-index: 1000;
+    transition: all 1s ease-in-out;
+}
+
+.card-container {
+    perspective: 1000px;
+}
+
+.card {
+    width: 350px;
+    height: 500px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.card-front {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #fff5f5 0%, #ffe0f0 100%);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.confetti-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.card-content {
+    text-align: center;
+    z-index: 10;
+}
+
+.birthday-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5em;
+    color: #6ba1ff;
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.cake-icon {
+    font-size: 4em;
+    margin: 20px 0;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #759af2;
+    margin-bottom: 30px;
+}
+
+.open-btn {
+    background: linear-gradient(135deg, #ff6b9d, #ff8fab);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 107, 157, 0.4);
+}
+
+.open-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 157, 0.6);
+}
+
+.sparkles {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, transparent 70%);
+    opacity: 0;
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+/* Inside Page Styles */
+.inside-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s ease-in-out;
+}
+
+.night-sky {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#starCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.constellation-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    animation: fadeInConstellation 3s ease-in-out 1s forwards;
+}
+
+.personal-message {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    max-width: 500px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInMessage 2s ease-in-out 2s forwards;
+}
+
+.personal-message h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2em;
+    color: #ffd700;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.personal-message p {
+    color: #fff;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.photo-frame {
+    
+    margin: 20px 0px;
+}
+
+.photo-frame img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 3px solid #ffd700;
+    object-fit: cover;
+}
+
+.signature {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.3em;
+    color: #ffd700;
+}
+
+.music-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.music-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes fadeInConstellation {
+    from { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
+    to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+@keyframes fadeInMessage {
+    from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+    to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        width: 300px;
+        height: 450px;
+    }
+    
+    .birthday-title {
+        font-size: 2em;
+    }
+    
+    .constellation-name {
+        font-size: 2em;
+    }
+    
+    .personal-message {
+        max-width: 90%;
+        padding: 20px;
+    }
+}
+
+/* Hide cover page when opened */
+.cover-page.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.8);
+}
+
+.inside-page.visible {
+    opacity: 1;
+    visibility: visible;
+}
