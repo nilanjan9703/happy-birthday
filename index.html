@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Dishu❤️</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="photo/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Cover Page -->
+    <div class="cover-page" id="coverPage">
+        <div class="card-container">
+            <div class="card">
+                <div class="card-front">
+                    <div class="confetti-container" id="confettiContainer"></div>
+                    <div class="card-content">
+                        <h1 class="birthday-title">Happy Birthday Dishu❤️</h1>
+                        <div class="cake-icon">🎂</div>
+                        <p class="subtitle">To My bestfriend, My comfort person, My second mom, My life, My future 🙈 i.e. My everything</p>
+                        <button class="open-btn" onclick="openCard()">
+                            <span>Open Card</span>
+                            <div class="sparkles"></div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inside Page - Starry Night -->
+    <div class="inside-page" id="insidePage">
+        <div class="night-sky">
+            <canvas id="starCanvas"></canvas>
+            <div class="constellation-name" id="constellationName">HER NAME</div>
+            <div class="personal-message">
+                <h2>My Dearest Love</h2>
+                <p>On this special day, I'm so Thankful for You.
+
+                    Thank you for coming into my life, for making me smile, for understanding me,
+                    
+                    for standing with me in every situation.
+                    
+                    I'm thankful that the Universe sent you and I'm thankful that I found You!! Happy birthday..to..you.</p>
+                <div class="photo-frame">
+                    <img src="photo/❤️.jpg" alt="Her Photo" id="herPhoto">
+                </div>
+                <p class="signature">Forever yours, <br>❤️</p>
+            </div>
+            <button class="music-btn" onclick="toggleMusic()">
+                <span id="musicIcon">🎵</span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Audio Element -->
+    <audio id="birthdaySong" loop>
+        <!-- <source src="music/mayabi.mpeg" type="audio/mpeg"> -->
+        <source src="music/jiya.mpeg" type="audio/ogg">
+        <source src="music/monta.mpeg" type="audio/ogg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
